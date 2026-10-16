@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercícios Físicos — SafeSignal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#ffffff"/>
+        <path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SafeSignal</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="exercicios.html" class="active">Exercícios Físicos</a>
+      <a href="planos.html">Planos e compras</a>
+      <a href="index.html#quem-somos">Quem somos</a>
+    </nav>
+
+    <button class="btn btn-outline-pill header-login" id="openLoginBtn" type="button">
+      <span>Login/cadastrar</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.8 4.2-6 7-6s5.8 2.2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="ex-hero">
+    <div class="container ex-hero-grid">
+      <div class="ex-hero-copy">
+        <p class="ex-tag">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12" stroke="#1B5E3B" stroke-width="2" stroke-linecap="round"/></svg>
+          Exercícios Físicos
+        </p>
+        <h1>Exercícios para<br>uma <span class="text-accent">vida mais ativa</span></h1>
+        <p class="ex-hero-text">Acompanhe nossos conteúdos, escolha seu treino e mexa-se com segurança. Vídeos práticos, orientações profissionais e exercícios para todas as idades.</p>
+
+        <div class="ex-benefits">
+          <div class="ex-benefit">
+            <span class="ex-benefit-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#1B5E3B" stroke-width="1.6"/><path d="M10.2 8.6l5 3.4-5 3.4V8.6z" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Exercícios Físicos</h3>
+              <p>Aulas práticas com profissionais</p>
+            </div>
+          </div>
+          <div class="ex-benefit">
+            <span class="ex-benefit-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5.2" r="2" stroke="#1B5E3B" stroke-width="1.6"/><path d="M4.5 9.5L12 11l7.5-1.5M12 11v4.5M12 15.5l-3 5M12 15.5l3 5" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Exercícios seguros</h3>
+              <p>Movimentos adaptados para cada nível</p>
+            </div>
+          </div>
+          <div class="ex-benefit">
+            <span class="ex-benefit-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7.3-4.6-7.3-10.1C4.7 6.7 6.9 5 9.2 5c1.2 0 2.4.6 2.8 1.7C12.4 5.6 13.6 5 14.8 5c2.3 0 4.5 1.7 4.5 4.9C19.3 15.4 12 20 12 20z" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3>Mais qualidade de vida</h3>
+              <p>Saúde, disposição e bem-estar no seu dia a dia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ex-hero-media">
+        <img src="https://images.pexels.com/photos/8018962/pexels-photo-8018962.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Idosa sorrindo enquanto alonga o braço">
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEOS EM DESTAQUE -->
+  <section class="ex-section" id="videos">
+    <div class="container">
+      <div class="ex-section-head">
+        <h2>Vídeos em destaque</h2>
+        <a href="#" class="ex-link" data-soon="A biblioteca completa de vídeos chega em breve.">Ver todos os vídeos <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="video-grid">
+        <a class="video-card" href="video.html?v=1">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Idoso caminhando em um parque" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">12:45</span>
+          </div>
+          <h3>Caminhada: comece devagar e vá mais longe</h3>
+          <div class="video-meta">
+            <span>Nível iniciante</span>
+            <span>12 min</span>
+            <span class="level" data-level="1" role="img" aria-label="Dificuldade baixa"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=2">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/7500321/pexels-photo-7500321.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Idosa alongando o corpo sobre um tapete" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">15:30</span>
+          </div>
+          <h3>Alongamento para o corpo todo</h3>
+          <div class="video-meta">
+            <span>Nível iniciante</span>
+            <span>15 min</span>
+            <span class="level" data-level="1" role="img" aria-label="Dificuldade baixa"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=3">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Casal de idosos se exercitando com halteres" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">18:20</span>
+          </div>
+          <h3>Fortalecimento para braços e pernas</h3>
+          <div class="video-meta">
+            <span>Nível intermediário</span>
+            <span>18 min</span>
+            <span class="level" data-level="2" role="img" aria-label="Dificuldade média"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=4">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Casal de idosos meditando sobre tapetes" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">10:15</span>
+          </div>
+          <h3>Exercícios de respiração e relaxamento</h3>
+          <div class="video-meta">
+            <span>Nível todos</span>
+            <span>10 min</span>
+            <span class="level" data-level="3" role="img" aria-label="Indicado para todos os níveis"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESCOLHA SEU TREINO -->
+  <section class="ex-section" id="treinos">
+    <div class="container">
+      <div class="ex-section-head">
+        <h2>Escolha seu treino</h2>
+      </div>
+
+      <div class="workout-grid">
+        <a class="workout" href="#" data-soon="Os vídeos de fortalecimento chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy" style="object-position:30% 40%"></div>
+          <h3>Fortalecimento</h3>
+          <p>Exercícios para ganhar força e manter os músculos ativos.</p>
+        </a>
+        <a class="workout" href="#" data-soon="Os vídeos de alongamento chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/7500321/pexels-photo-7500321.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy"></div>
+          <h3>Alongamento</h3>
+          <p>Melhore sua flexibilidade e previna lesões.</p>
+        </a>
+        <a class="workout" href="#" data-soon="Os vídeos de equilíbrio chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/8018962/pexels-photo-8018962.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy" style="object-position:60% 30%"></div>
+          <h3>Equilíbrio</h3>
+          <p>Atividades para melhorar o equilíbrio e a estabilidade.</p>
+        </a>
+        <a class="workout" href="#" data-soon="Os vídeos de mobilidade chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy" style="object-position:50% 20%"></div>
+          <h3>Mobilidade</h3>
+          <p>Movimentos que ajudam na sua autonomia diária.</p>
+        </a>
+        <a class="workout" href="#" data-soon="Os vídeos de relaxamento chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy" style="object-position:30% 40%"></div>
+          <h3>Relaxamento</h3>
+          <p>Reduza o estresse e cuide da sua saúde mental.</p>
+        </a>
+        <a class="workout" href="#" data-soon="Os vídeos de cardio chegam em breve.">
+          <div class="workout-photo"><img src="https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" loading="lazy" style="object-position:70% 40%"></div>
+          <h3>Cardio</h3>
+          <p>Exercícios cardiovasculares para mais disposição.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVOS VÍDEOS -->
+  <section class="ex-banner">
+    <div class="container">
+      <div class="ex-banner-inner">
+        <span class="ex-banner-icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="9" width="17" height="11" rx="1.6" stroke="#fff" stroke-width="1.6"/><path d="M3.5 9l2-4.5 3 1.2M8.5 5.7l3-1.2M11.5 4.5l3 1.2M14.5 5.7l3-1.2M6 9l2-3.3M11 9l2-3.3M16 9l2-3.3" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 12.5l4 2.5-4 2.5v-5z" fill="#fff"/></svg>
+        </span>
+        <div class="ex-banner-text">
+          <h2>Novos vídeos toda semana!</h2>
+          <p>Treinos práticos, dicas de saúde e muito mais para você se cuidar.</p>
+        </div>
+        <a href="#" class="btn btn-primary ex-banner-btn" data-soon="A biblioteca completa de vídeos chega em breve.">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4l14 8-14 8V4z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+          Ver todos os vídeos
+        </a>
+        <img class="ex-banner-img" src="https://images.pexels.com/photos/7500321/pexels-photo-7500321.jpeg?auto=compress&cs=tinysrgb&w=500" alt="" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo logo-light">
+        <svg width="26" height="26" viewBox="0 0 30 30" fill="none"><path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#fff"/><path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>SafeSignal</span>
+      </a>
+      <p>Exercícios seguros e personalizados para uma vida mais ativa, saudável e com mais qualidade.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="planos.html">Planos e compras</a>
+      <a href="index.html#quem-somos">Quem Somos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <a href="#">Perguntas Frequentes</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+
+    <div class="footer-login">
+      <h4>Login e cadastre-se</h4>
+      <p>Acesse sua conta e acompanhe seu progresso</p>
+      <form id="footerLoginForm" novalidate>
+        <input type="email" id="footerEmail" name="email" placeholder="E-mail" required>
+        <input type="password" id="footerPassword" name="senha" placeholder="senha" required>
+        <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+        <p class="footer-signup">Não tem conta? <a href="cadastro.html">cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>2026 SafeSignal. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL DE LOGIN -->
+<div class="modal-overlay" id="loginModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <button class="modal-close" id="closeLoginBtn" aria-label="Fechar">×</button>
+    <h2 id="loginModalTitle">Entrar na SafeSignal</h2>
+    <p class="modal-subtitle">Acesse sua conta e acompanhe seu progresso</p>
+    <form id="modalLoginForm" novalidate>
+      <label for="modalEmail">E-mail</label>
+      <input type="email" id="modalEmail" placeholder="seuemail@exemplo.com" required>
+      <label for="modalPassword">Senha</label>
+      <input type="password" id="modalPassword" placeholder="senha" required>
+      <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+    </form>
+    <p class="modal-signup">Não tem conta? <a href="cadastro.html" id="modalSignupLink">Cadastre-se</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script src="exercicios.js"></script>
+</body>
+</html>

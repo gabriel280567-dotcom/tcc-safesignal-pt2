@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planos e Compras — SafeSignal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#ffffff"/>
+        <path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SafeSignal</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="planos.html" class="active">Planos e compras</a>
+      <a href="index.html#quem-somos">Quem somos</a>
+    </nav>
+
+    <button class="btn btn-outline-pill header-login" id="openLoginBtn" type="button">
+      <span>Login/cadastrar</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.8 4.2-6 7-6s5.8 2.2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO PLANOS -->
+  <section class="hero plans-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h2l1.5 11h11L20 8H7" stroke="#2F9E52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19" r="1.4" fill="#2F9E52"/><circle cx="17" cy="19" r="1.4" fill="#2F9E52"/></svg>
+          Plano e Compras
+        </p>
+        <h1>Escolha o plano ideal para vc</h1>
+        <p class="hero-text">Invista na sua saúde com programas seguros e personalizados, escolha o plano que melhor atende as suas necessidades e comece hoje mesmo uma rotina de exercícios com acompanhamento profissional.</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-blob"></div>
+        <img src="https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Casal de idosos se exercitando com halteres" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS DE PLANOS -->
+  <section class="pricing" id="pricing">
+    <div class="container pricing-grid">
+
+      <div class="pricing-card">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" stroke="#1B5E3B" stroke-width="1.6"/><path d="M5 20c1.3-3.9 4.2-6 7-6s5.7 2.1 7 6" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Plano Basico</h3>
+        <p class="price"><span class="currency">R$</span>49,90<span class="period">/mês</span></p>
+        <a href="cadastro.html" class="btn btn-primary btn-block">Começar agora</a>
+      </div>
+
+      <div class="pricing-card pricing-card-highlight">
+        <span class="pricing-badge">Mais popular</span>
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" stroke="#1B5E3B" stroke-width="1.6"/><path d="M5 20c1.3-3.9 4.2-6 7-6s5.7 2.1 7 6" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/><path d="M18.5 3.3l.7 1.5 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.1 1.6-.2.7-1.5z" fill="#1B5E3B"/></svg>
+        <h3>Plano Premium</h3>
+        <p class="price"><span class="currency">R$</span>89,90<span class="period">/mês</span></p>
+        <a href="cadastro.html" class="btn btn-primary btn-block">Assinar premium</a>
+      </div>
+
+      <div class="pricing-card">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" stroke="#1B5E3B" stroke-width="1.6"/><path d="M5 20c1.3-3.9 4.2-6 7-6s5.7 2.1 7 6" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/><circle cx="18.5" cy="4.5" r="2" stroke="#1B5E3B" stroke-width="1.4"/></svg>
+        <h3>Plano Personal</h3>
+        <p class="price"><span class="currency">R$</span>149,90<span class="period">/mês</span></p>
+        <a href="cadastro.html" class="btn btn-primary btn-block">Começar agora</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ROUPAS ESPORTIVAS -->
+  <section class="apparel">
+    <div class="container">
+      <div class="apparel-header">
+        <p class="eyebrow eyebrow-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 8V6a3 3 0 0 1 6 0M18 8V6a3 3 0 0 0-6 0" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/><rect x="4" y="8" width="16" height="12" rx="2.5" stroke="#1B5E3B" stroke-width="1.6"/></svg>
+        </p>
+        <h2>Roupas esportivas</h2>
+        <p>Conforto, estilo e liberdade para o seu movimento — camisetas, shorts e conjuntos masculinos e femininos, com qualidade e design moderno.</p>
+      </div>
+
+      <div class="apparel-grid">
+
+        <div class="product-card">
+          <div class="garment-thumb">
+            <svg viewBox="0 0 100 100"><polygon class="sleeve" points="25,30 5,42 14,56 25,46"/><polygon class="sleeve" points="75,30 95,42 86,56 75,46"/><path class="body" d="M25 30 L37 24 Q50 32 63 24 L75 30 L75 84 Q50 90 25 84 Z"/><path class="logo-heart" d="M50 48c-3-3-8-2-8 2 0 4 8 9 8 9s8-5 8-9c0-4-5-5-8-2z"/><path class="logo-pulse" d="M38 54h5l2-4 3 8 2-4h7" /></svg>
+          </div>
+          <h3>Camiseta Masculina Esportiva</h3>
+          <p class="price"><span class="currency">R$</span>59,90</p>
+          <button type="button" class="btn btn-primary btn-block add-to-cart">Compre agora</button>
+        </div>
+
+        <div class="product-card">
+          <div class="garment-thumb feminine">
+            <svg viewBox="0 0 100 100"><polygon class="sleeve" points="25,30 5,42 14,56 25,46"/><polygon class="sleeve" points="75,30 95,42 86,56 75,46"/><path class="trim" d="M25 30 L30 30 L30 84 L25 84 Z"/><path class="trim" d="M75 30 L70 30 L70 84 L75 84 Z"/><path class="body" d="M30 30 L37 24 Q50 32 63 24 L70 30 L70 84 Q50 89 30 84 Z"/><path class="logo-heart" d="M50 48c-3-3-8-2-8 2 0 4 8 9 8 9s8-5 8-9c0-4-5-5-8-2z"/><path class="logo-pulse" d="M38 54h5l2-4 3 8 2-4h7" /></svg>
+          </div>
+          <h3>Camiseta Feminina Esportiva</h3>
+          <p class="price"><span class="currency">R$</span>54,90</p>
+          <button type="button" class="btn btn-primary btn-block add-to-cart">Compre agora</button>
+        </div>
+
+        <div class="product-card">
+          <div class="garment-thumb">
+            <svg viewBox="0 0 100 100"><rect class="body" x="20" y="18" width="60" height="14" rx="5"/><path class="body" d="M22 32 L78 32 L73 62 L54 62 L50 44 L46 62 L27 62 Z"/><path class="logo-heart" d="M50 42c-2.4-2.4-6.4-1.6-6.4 1.6 0 3.2 6.4 7.2 6.4 7.2s6.4-4 6.4-7.2c0-3.2-4-4-6.4-1.6z"/></svg>
+          </div>
+          <h3>Shorts Masculina Esportiva</h3>
+          <p class="price"><span class="currency">R$</span>69,90</p>
+          <button type="button" class="btn btn-primary btn-block add-to-cart">Compre agora</button>
+        </div>
+
+        <div class="product-card">
+          <div class="garment-thumb feminine">
+            <svg viewBox="0 0 100 100"><rect class="body" x="20" y="18" width="60" height="14" rx="5"/><path class="trim" d="M22 32 L30 32 L26 62 L22 62 Z"/><path class="trim" d="M78 32 L70 32 L74 62 L78 62 Z"/><path class="body" d="M30 32 L70 32 L65 60 L54 60 L50 44 L46 60 L35 60 Z"/><path class="logo-heart" d="M50 42c-2.4-2.4-6.4-1.6-6.4 1.6 0 3.2 6.4 7.2 6.4 7.2s6.4-4 6.4-7.2c0-3.2-4-4-6.4-1.6z"/></svg>
+          </div>
+          <h3>Shorts Feminina Esportiva</h3>
+          <p class="price"><span class="currency">R$</span>64,90</p>
+          <button type="button" class="btn btn-primary btn-block add-to-cart">Compre agora</button>
+        </div>
+
+      </div>
+
+      <div class="apparel-features">
+        <span>Tecido respirável</span>
+        <span>Secagem rápida</span>
+        <span>Conforto total</span>
+        <span>Alta durabilidade</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="dark-strip">
+    <div class="container dark-strip-inner">
+      <div class="dark-strip-left">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-8-4.9-8-10.6C4 6.7 6.3 4.6 9 4.6c1.4 0 2.7.7 3 2 .3-1.3 1.6-2 3-2 2.7 0 5 2.1 5 5.3 0 5.7-8 10.6-8 10.6z" fill="#fff"/><path d="M5.5 11h3l1.7-3.6L12.5 15l1.6-4h3.4" stroke="#1B5E3B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2>Cuide da sua saúde com estilo</h2>
+      </div>
+      <div class="dark-strip-divider"></div>
+      <div class="dark-strip-right">
+        <p>Escolha seus planos e roupas esportivas e comece hoje mesmo a transformar sua rotina.</p>
+        <a href="cadastro.html" class="btn btn-white-pill">Assinar agora <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo logo-light">
+        <svg width="26" height="26" viewBox="0 0 30 30" fill="none"><path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#fff"/><path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>SafeSignal</span>
+      </a>
+      <p>Exercícios seguros e personalizados para uma vida mais ativa, saudável e com mais qualidade.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="planos.html">Programas</a>
+      <a href="index.html#quem-somos">Quem Somos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <a href="#">Perguntas Frequentes</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+
+    <div class="footer-login">
+      <h4>Login e cadastre-se</h4>
+      <p>Acesse sua conta e acompanhe seu progresso</p>
+      <form id="footerLoginForm" novalidate>
+        <input type="email" id="footerEmail" name="email" placeholder="E-mail" required>
+        <input type="password" id="footerPassword" name="senha" placeholder="senha" required>
+        <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+        <p class="footer-signup">Não tem conta? <a href="cadastro.html">cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>2026 SafeSignal. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL DE LOGIN -->
+<div class="modal-overlay" id="loginModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <button class="modal-close" id="closeLoginBtn" aria-label="Fechar">×</button>
+    <h2 id="loginModalTitle">Entrar na SafeSignal</h2>
+    <p class="modal-subtitle">Acesse sua conta e acompanhe seu progresso</p>
+    <form id="modalLoginForm" novalidate>
+      <label for="modalEmail">E-mail</label>
+      <input type="email" id="modalEmail" placeholder="seuemail@exemplo.com" required>
+      <label for="modalPassword">Senha</label>
+      <input type="password" id="modalPassword" placeholder="senha" required>
+      <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+    </form>
+    <p class="modal-signup">Não tem conta? <a href="cadastro.html" id="modalSignupLink">Cadastre-se</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

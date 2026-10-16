@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeo — SafeSignal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#ffffff"/>
+        <path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SafeSignal</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Início</a>
+      <a href="exercicios.html" class="active">Exercícios Físicos</a>
+      <a href="planos.html">Planos e compras</a>
+      <a href="index.html#quem-somos">Quem somos</a>
+    </nav>
+
+    <button class="btn btn-outline-pill header-login" id="openLoginBtn" type="button">
+      <span>Login/cadastrar</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.8 4.2-6 7-6s5.8 2.2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="vp">
+    <div class="container">
+      <a href="exercicios.html" class="vp-back"><span aria-hidden="true">←</span> Voltar para Exercícios Físicos</a>
+      <h1 class="vp-label" id="vpLabel">Vídeo 4</h1>
+
+      <button type="button" class="vp-player" id="vpPlayer" aria-label="Reproduzir vídeo">
+        <img id="vpImg" src="https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Casal de idosos meditando sobre tapetes">
+        <span class="play" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+        <span class="duration" id="vpDuration">10:15</span>
+      </button>
+
+      <h2 class="vp-title" id="vpTitle">Exercícios de respiração e relaxamento</h2>
+
+      <div class="video-grid">
+        <a class="video-card" href="video.html?v=1">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Idoso caminhando em um parque" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">12:45</span>
+          </div>
+          <h3>Caminhada: comece devagar e vá mais longe</h3>
+          <div class="video-meta">
+            <span>Nível iniciante</span>
+            <span>12 min</span>
+            <span class="level" data-level="1" role="img" aria-label="Dificuldade baixa"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=2">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/7500321/pexels-photo-7500321.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Idosa alongando o corpo sobre um tapete" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">15:30</span>
+          </div>
+          <h3>Alongamento para o corpo todo</h3>
+          <div class="video-meta">
+            <span>Nível iniciante</span>
+            <span>15 min</span>
+            <span class="level" data-level="1" role="img" aria-label="Dificuldade baixa"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=3">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Casal de idosos se exercitando com halteres" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">18:20</span>
+          </div>
+          <h3>Fortalecimento para braços e pernas</h3>
+          <div class="video-meta">
+            <span>Nível intermediário</span>
+            <span>18 min</span>
+            <span class="level" data-level="2" role="img" aria-label="Dificuldade média"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+
+        <a class="video-card" href="video.html?v=4">
+          <div class="video-thumb">
+            <img src="https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Casal de idosos meditando sobre tapetes" loading="lazy">
+            <span class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 3.5v17L20.5 12 6 3.5z" fill="#111"/></svg></span>
+            <span class="duration">10:15</span>
+          </div>
+          <h3>Exercícios de respiração e relaxamento</h3>
+          <div class="video-meta">
+            <span>Nível todos</span>
+            <span>10 min</span>
+            <span class="level" data-level="3" role="img" aria-label="Indicado para todos os níveis"><i></i><i></i><i></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo logo-light">
+        <svg width="26" height="26" viewBox="0 0 30 30" fill="none"><path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#fff"/><path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>SafeSignal</span>
+      </a>
+      <p>Exercícios seguros e personalizados para uma vida mais ativa, saudável e com mais qualidade.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <a href="index.html">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="planos.html">Planos e compras</a>
+      <a href="index.html#quem-somos">Quem Somos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <a href="#">Perguntas Frequentes</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+
+    <div class="footer-login">
+      <h4>Login e cadastre-se</h4>
+      <p>Acesse sua conta e acompanhe seu progresso</p>
+      <form id="footerLoginForm" novalidate>
+        <input type="email" id="footerEmail" name="email" placeholder="E-mail" required>
+        <input type="password" id="footerPassword" name="senha" placeholder="senha" required>
+        <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+        <p class="footer-signup">Não tem conta? <a href="cadastro.html">cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>2026 SafeSignal. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL DE LOGIN -->
+<div class="modal-overlay" id="loginModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <button class="modal-close" id="closeLoginBtn" aria-label="Fechar">×</button>
+    <h2 id="loginModalTitle">Entrar na SafeSignal</h2>
+    <p class="modal-subtitle">Acesse sua conta e acompanhe seu progresso</p>
+    <form id="modalLoginForm" novalidate>
+      <label for="modalEmail">E-mail</label>
+      <input type="email" id="modalEmail" placeholder="seuemail@exemplo.com" required>
+      <label for="modalPassword">Senha</label>
+      <input type="password" id="modalPassword" placeholder="senha" required>
+      <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+    </form>
+    <p class="modal-signup">Não tem conta? <a href="cadastro.html" id="modalSignupLink">Cadastre-se</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script src="exercicios.js"></script>
+<script src="video.js"></script>
+</body>
+</html>

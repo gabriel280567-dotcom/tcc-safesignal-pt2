@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeSignal — Exercícios seguros para uma vida mais ativa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#topo" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#ffffff"/>
+        <path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SafeSignal</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#topo" class="active">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="planos.html">Planos e compras</a>
+      <a href="#quem-somos">Quem somos</a>
+    </nav>
+
+    <button class="btn btn-outline-pill header-login" id="openLoginBtn" type="button">
+      <span>Login/cadastrar</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c1.2-3.8 4.2-6 7-6s5.8 2.2 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Saúde ativa para uma melhor idade</p>
+        <h1>Exercícios seguros para uma vida mais <span class="text-accent">ativa e saudável</span></h1>
+        <p class="hero-text">Oferecemos programas de exercícios desenvolvidos especialmente para idosos, promovendo mais saúde, equilíbrio e qualidade de vida no conforto do seu lar.</p>
+
+        <div class="hero-features">
+          <div class="hero-feature">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-3z" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Segurança</h3>
+            <p>Exercícios desenvolvidos por profissionais qualificados.</p>
+          </div>
+          <div class="hero-feature">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" stroke="#1B5E3B" stroke-width="1.6"/><path d="M5 20c1.3-3.9 4.2-6 7-6s5.7 2.1 7 6" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Personalizados</h3>
+            <p>Atividades adaptadas para cada nível e necessidade individual.</p>
+          </div>
+          <div class="hero-feature">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7.3-4.6-7.3-10.1C4.7 6.7 6.9 5 9.2 5c1.2 0 2.4.6 2.8 1.7C12.4 5.6 13.6 5 14.8 5c2.3 0 4.5 1.7 4.5 4.9C19.3 15.4 12 20 12 20z" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <h3>Mais Qualidade</h3>
+            <p>Mais saúde, autonomia e bem-estar no seu dia a dia.</p>
+          </div>
+        </div>
+
+        <a href="planos.html" class="btn btn-primary">Comece agora <span class="arrow">→</span></a>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-blob"></div>
+        <img src="https://images.pexels.com/photos/8018962/pexels-photo-8018962.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Idosa alongando o braço" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMAS -->
+  <section class="programs" id="programas">
+    <div class="container programs-grid">
+      <div class="programs-media">
+        <img id="programImg" src="https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Idoso correndo no parque">
+      </div>
+
+      <div class="programs-copy">
+        <p class="eyebrow">Nossos Programas</p>
+        <h2 id="programTitle">Movimente-se com segurança e propósito</h2>
+
+        <ul class="check-list" id="programList">
+          <li><span class="check">✓</span>Fortalecimento Muscular</li>
+          <li><span class="check">✓</span>Equilíbrio e Prevenção de Quedas</li>
+          <li><span class="check">✓</span>Mobilidade Articular</li>
+          <li><span class="check">✓</span>Alongamento e Flexibilidade</li>
+          <li><span class="check">✓</span>Exercícios Funcionais</li>
+          <li><span class="check">✓</span>Condicionamento Físico</li>
+          <li><span class="check">✓</span>Treinos Personalizados</li>
+        </ul>
+
+        <div class="carousel-controls">
+          <button type="button" id="prevProgram" aria-label="Programa anterior">‹</button>
+          <span id="carouselCount">1 / 4</span>
+          <button type="button" id="nextProgram" aria-label="Próximo programa">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA IMEDIATO -->
+  <section class="cta-strip">
+    <div class="container cta-strip-inner">
+      <div class="cta-strip-text">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="8" stroke="#fff" stroke-width="1.6"/><path d="M12 9v4l3 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 5l2.5 2M20 5l-2.5 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div>
+          <p>Podemos oferecer um serviço imediato</p>
+          <h2>Fale com a gente!</h2>
+        </div>
+      </div>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn btn-white-pill">
+        Fale conosco
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#1B5E3B"><path d="M12 2C6.5 2 2 6.4 2 11.8c0 2 .6 3.9 1.6 5.5L2 22l4.9-1.6c1.5.9 3.3 1.4 5.1 1.4 5.5 0 10-4.4 10-9.9C22 6.4 17.5 2 12 2z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- POR QUE ESCOLHER -->
+  <section class="why">
+    <div class="container">
+      <p class="eyebrow center">Por que escolher a SafeSignal?</p>
+      <h2 class="center">Cuidado completo para uma vida melhor</h2>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-3z" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Segurança em primeiro lugar</h3>
+          <p>Todos os exercícios são elaborados com foco na segurança e nas necessidades da terceira idade.</p>
+        </div>
+        <div class="why-item">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="14" cy="8" r="3.4" stroke="#1B5E3B" stroke-width="1.6"/><path d="M8 20c1-3.3 3.6-5.2 6-5.2s5 1.9 6 5.2" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round"/><path d="M18.5 5.3l.7 1.5 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.1 1.6-.2.7-1.5z" fill="#1B5E3B"/></svg>
+          <h3>Profissionais qualificados</h3>
+          <p>Nossa equipe é formada por especialistas em saúde e atividade física para idosos.</p>
+        </div>
+        <div class="why-item">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 11.5L12 4l8 7.5" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9h12v-9" stroke="#1B5E3B" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <h3>Conforto de casa</h3>
+          <p>Treine no conforto do seu lar, com acompanhamento e orientação profissional.</p>
+        </div>
+        <div class="why-item">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 17l5-5 4 4 7-8" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Mais saúde e autonomia</h3>
+          <p>Promovemos bem-estar, independência e qualidade de vida em cada etapa da vida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA VERDE ESCURA -->
+  <section class="dark-strip" id="transforme">
+    <div class="container dark-strip-inner">
+      <div class="dark-strip-left">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-8-4.9-8-10.6C4 6.7 6.3 4.6 9 4.6c1.4 0 2.7.7 3 2 .3-1.3 1.6-2 3-2 2.7 0 5 2.1 5 5.3 0 5.7-8 10.6-8 10.6z" fill="#fff"/><path d="M5.5 11h3l1.7-3.6L12.5 15l1.6-4h3.4" stroke="#1B5E3B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2>Transforme sua rotina com exercícios feitos para você.</h2>
+      </div>
+      <div class="dark-strip-divider"></div>
+      <div class="dark-strip-right">
+        <p>Promovemos saúde, qualidade de vida e bem-estar por meio de atividades seguras, práticas e eficazes, que podem ser realizadas no conforto de casa.</p>
+        <a href="planos.html" class="btn btn-white-pill">Comece agora <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section class="about" id="quem-somos">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Quem somos</p>
+        <h2>Cuidar de pessoas é o que nos move</h2>
+        <p>A SafeSignal nasceu com o propósito de transformar a vida de pessoas idosas por meio de exercícios físicos seguros, acessíveis e personalizados.</p>
+        <p>Acreditamos que envelhecer com saúde é possível quando há orientação certa, motivação e cuidado de verdade.</p>
+
+        <div class="mission-vision">
+          <div>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-7-10c0-3.1 2.2-5 4.7-5 1.1 0 2.3.6 2.3 1.7 0-1.1 1.2-1.7 2.3-1.7 2.5 0 4.7 1.9 4.7 5 0 5.6-7 10-7 10z" stroke="#1B5E3B" stroke-width="1.5"/><path d="M9.5 11.5l1.5 1.5 3.5-3.5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Nossa Missão</h3>
+            <p>Promover saúde, autonomia e qualidade de vida para idosos, com programas de exercícios seguros e eficazes.</p>
+          </div>
+          <div>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="9" ry="5.5" stroke="#1B5E3B" stroke-width="1.5"/><circle cx="12" cy="12" r="2.6" stroke="#1B5E3B" stroke-width="1.5"/></svg>
+            <h3>Nossa Visão</h3>
+            <p>Ser referência em saúde ativa para a terceira idade, levando bem-estar e segurança a cada lar.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-7-10c0-3.1 2.2-5 4.7-5 1.1 0 2.3.6 2.3 1.7 0-1.1 1.2-1.7 2.3-1.7 2.5 0 4.7 1.9 4.7 5 0 5.6-7 10-7 10z" stroke="#1B5E3B" stroke-width="1.5"/><path d="M8.5 12l2 2 5-5" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>+5.000</strong><span>Vidas transformadas</span></div>
+          </div>
+          <div class="stat">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#1B5E3B" stroke-width="1.5"/><path d="M5.5 20c1.2-3.7 3.9-5.6 6.5-5.6s5.3 1.9 6.5 5.6" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div><strong>+10</strong><span>Profissionais parceiros</span></div>
+          </div>
+          <div class="stat">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 17l5-5 4 4 7-8" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="#1B5E3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><strong>+50</strong><span>Programas de exercícios</span></div>
+          </div>
+          <div class="stat">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7.3-4.6-7.3-10.1C4.7 6.7 6.9 5 9.2 5c1.2 0 2.4.6 2.8 1.7C12.4 5.6 13.6 5 14.8 5c2.3 0 4.5 1.7 4.5 4.9C19.3 15.4 12 20 12 20z" stroke="#1B5E3B" stroke-width="1.5"/></svg>
+            <div><strong>98%</strong><span>Satisfação dos alunos</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-media">
+        <img src="https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Casal de idosos sorrindo">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#topo" class="logo logo-light">
+        <svg width="26" height="26" viewBox="0 0 30 30" fill="none"><path d="M15 26.5s-11-6.9-11-14.7C4 7.6 7 5 10.3 5c2.1 0 3.9 1.1 4.7 2.8C15.8 6.1 17.6 5 19.7 5 23 5 26 7.6 26 11.8 26 19.6 15 26.5 15 26.5z" fill="#fff"/><path d="M6 14h4l2-5 3 10 2-5h7" stroke="#1B5E3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>SafeSignal</span>
+      </a>
+      <p>Exercícios seguros e personalizados para uma vida mais ativa, saudável e com mais qualidade.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <a href="#topo">Início</a>
+      <a href="exercicios.html">Exercícios Físicos</a>
+      <a href="#programas">Programas</a>
+      <a href="#quem-somos">Quem Somos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links Úteis</h4>
+      <a href="#">Perguntas Frequentes</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Fale Conosco</a>
+    </div>
+
+    <div class="footer-login">
+      <h4>Login e cadastre-se</h4>
+      <p>Acesse sua conta e acompanhe seu progresso</p>
+      <form id="footerLoginForm" novalidate>
+        <input type="email" id="footerEmail" name="email" placeholder="E-mail" required>
+        <input type="password" id="footerPassword" name="senha" placeholder="senha" required>
+        <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+        <p class="footer-signup">Não tem conta? <a href="cadastro.html" id="openSignupLink">cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>2026 SafeSignal. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL DE LOGIN (placeholder — telas definitivas a confirmar) -->
+<div class="modal-overlay" id="loginModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <button class="modal-close" id="closeLoginBtn" aria-label="Fechar">×</button>
+    <h2 id="loginModalTitle">Entrar na SafeSignal</h2>
+    <p class="modal-subtitle">Acesse sua conta e acompanhe seu progresso</p>
+    <form id="modalLoginForm" novalidate>
+      <label for="modalEmail">E-mail</label>
+      <input type="email" id="modalEmail" placeholder="seuemail@exemplo.com" required>
+      <label for="modalPassword">Senha</label>
+      <input type="password" id="modalPassword" placeholder="senha" required>
+      <button type="submit" class="btn btn-primary btn-block">ENTRAR</button>
+    </form>
+    <p class="modal-signup">Não tem conta? <a href="cadastro.html" id="modalSignupLink">Cadastre-se</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
