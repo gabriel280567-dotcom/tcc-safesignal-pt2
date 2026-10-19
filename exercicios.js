@@ -42,8 +42,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   titulo.appendChild(textoTitulo);
   titulo.style.marginTop = '40px';
-titulo.style.marginBottom = '10px';
+  titulo.style.marginBottom = '10px';
   secaoTreinos.append(titulo, lista);
+
+  const imagensCategorias = {
+      'fortalecimento': 'https://images.pexels.com/photos/7530436/pexels-photo-7530436.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'alongamento': 'https://images.pexels.com/photos/7500321/pexels-photo-7500321.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'equilibrio': 'https://images.pexels.com/photos/8018962/pexels-photo-8018962.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'mobilidade': 'https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'relaxamento': 'https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=400',
+      'cardio': 'https://images.pexels.com/photos/8497647/pexels-photo-8497647.jpeg?auto=compress&cs=tinysrgb&w=400'
+  };
 
   let exercicios = [];
 
@@ -96,6 +105,22 @@ titulo.style.marginBottom = '10px';
       const card = document.createElement('article');
       card.className = 'workout';
 
+      const chaveCategoria = normalizar(exercicio.categoria);
+      const imagemUrl = imagensCategorias[chaveCategoria];
+
+      if (imagemUrl) {
+        const areaImagem = document.createElement('div');
+        areaImagem.className = 'workout-photo';
+
+        const imagem = document.createElement('img');
+        imagem.src = imagemUrl;
+        imagem.alt = `Exercício de ${exercicio.categoria}`;
+        imagem.loading = 'lazy';
+
+        areaImagem.appendChild(imagem);
+        card.appendChild(areaImagem);
+      }
+
       const nome = document.createElement('h3');
       nome.textContent = exercicio.nome;
 
@@ -107,6 +132,7 @@ titulo.style.marginBottom = '10px';
 
       card.append(nome, duracao, categoria);
       lista.appendChild(card);
+
     });
   }
 

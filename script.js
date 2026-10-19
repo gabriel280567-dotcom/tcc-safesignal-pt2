@@ -55,10 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   [modalSignupLink, openSignupLink].forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      showToast('Cadastro em breve — página de cadastro ainda será integrada.');
-    });
+    if (link) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'cadastro.html';
+      });
+    }
   });
 
   /* ---------- Formulários de login (placeholders) ---------- */
