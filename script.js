@@ -236,23 +236,82 @@ document.addEventListener('DOMContentLoaded', () => {
     openModal();
   }
 
-  /* ---------- Formulários de login (placeholders) ---------- */
+  
+  /* ---------- Formulários de login conectados ao backend ---------- */
+
+  async function realizarLogin(email, senha) {
+    if (!email || !senha) {
+      showToast('Preencha o e-mail e a senha.');
+      return false;
+    }
+
+    try {
+      const resposta = await fetch(
+        'http://localhost:8080/usuarios/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, senha })
+        }
+      );
+
+      if (resposta.ok) {
+        showToast('Login realizado com sucesso!');
+        return true;
+      }
+
+      if (resposta.status === 401) {
+        showToast('E-mail ou senha inválidos.');
+      } else {
+        showToast('Não foi possível realizar o login.');
+      }
+
+      return false;
+
+    } catch (erro) {
+      console.error('Erro ao fazer login:', erro);
+      showToast('Não foi possível conectar ao servidor.');
+      return false;
+    }
+  }
+
   const modalLoginForm = document.getElementById('modalLoginForm');
+
   if (modalLoginForm) {
-    modalLoginForm.addEventListener('submit', (e) => {
+    modalLoginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showToast('Login em breve — integração com o back-end pendente.');
-      closeModal();
+
+      const email = document.getElementById('modalEmail').value.trim();
+      const senha = document.getElementById('modalPassword').value;
+
+      const sucesso = await realizarLogin(email, senha);
+
+      if (sucesso) {
+        closeModal();
+        modalLoginForm.reset();
+      }
     });
   }
 
   const footerLoginForm = document.getElementById('footerLoginForm');
+
   if (footerLoginForm) {
-    footerLoginForm.addEventListener('submit', (e) => {
+    footerLoginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showToast('Login em breve — integração com o back-end pendente.');
+
+      const email = document.getElementById('footerEmail').value.trim();
+      const senha = document.getElementById('footerPassword').value;
+
+      const sucesso = await realizarLogin(email, senha);
+
+      if (sucesso) {
+        footerLoginForm.reset();
+      }
     });
   }
+
 
   /* ---------- Carrossel "Nossos Programas" (somente na Home) ---------- */
   const programImg = document.getElementById('programImg');
@@ -364,12 +423,78 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    signupForm.addEventListener('submit', (e) => {
+    signupForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showToast('Conta criada com sucesso! Redirecionando…');
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1200);
+
+      const nomeCompleto = document.getElementById('fullName').value.trim();
+      const dataNascimento = document.getElementById('birthDate').value;
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('password').value;
+      const telefone = document.getElementById('phone').value.trim();
+
+      const condicoesSelecionadas = Array.from(
+        document.querySelectorAll('input[name="condicoes"]:checked')
+      ).map(input => input.value);
+
+      const outraCondicao = document.getElementById('otherConditionText').value.trim();
+
+      if (!nomeCompleto || !dataNascimento || !email || !senha) {
+        showToast('Preencha todos os campos obrigatórios.');
+        return;
+      }
+
+      if (senha.length < 6) {
+        showToast('A senha deve ter pelo menos 6 caracteres.');
+        return;
+      }
+
+      const usuario = {
+        nomeCompleto: nomeCompleto,
+        dataNascimento: dataNascimento,
+        email: email,
+        senha: senha,
+        telefone: telefone || null,
+        condicoesFisicas: [
+          ...condicoesSelecionadas,
+          ...(outraCondicao ? [outraCondicao] : [])
+        ].join(', ') || null
+      };
+
+      try {
+        const resposta = await fetch('http://localhost:8080/usuarios', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(usuario)
+        });
+
+        if (resposta.ok) {
+          showToast('Conta criada com sucesso!');
+
+          setTimeout(() => {
+            window.location.href = 'index.html#login';
+          }, 1200);
+
+        } else {
+          const erro = await resposta.json().catch(() => ({}));
+
+          const mensagem = Object.values(erro).find(
+            valor => typeof valor === 'string'
+          );
+
+          showToast(
+            mensagem ||
+            (resposta.status === 409
+              ? 'E-mail ou telefone já cadastrado.'
+              : 'Não foi possível criar a conta.')
+          );
+        }
+
+      } catch (erro) {
+        console.error('Erro ao cadastrar usuário:', erro);
+        showToast('Não foi possível conectar ao servidor.');
+      }
     });
   }
 

@@ -19,3 +19,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const categorias = document.querySelectorAll(
+    '#treinos [data-categoria]'
+  );
+
+  // Cria a área onde os exercícios serão exibidos.
+  const lista = document.createElement('div');
+  lista.className = 'workout-grid';
+  lista.id = 'exercicios-lista';
+
+  const secaoTreinos = document.querySelector('#treinos .container');
+
+  if (!secaoTreinos) return;
+
+  const titulo = document.createElement('div');
+  titulo.className = 'ex-section-head';
+
+  const textoTitulo = document.createElement('h2');
+  textoTitulo.textContent = 'Exercícios disponíveis';
+
+  titulo.appendChild(textoTitulo);
+  titulo.style.marginTop = '40px';
+titulo.style.marginBottom = '10px';
+  secaoTreinos.append(titulo, lista);
+
+  let exercicios = [];
+
+  try {
+    const resposta = await fetch('http://localhost:8080/exercicios');
+
+    if (!resposta.ok) {
+      throw new Error('Não foi possível buscar os exercícios.');
+    }
+
+    exercicios = await resposta.json();
+
+    // Mostra todos os exercícios inicialmente.
+    mostrarExercicios();
+  } catch (erro) {
+    console.error('Erro ao carregar exercícios:', erro);
+    lista.textContent =
+      'Não foi possível carregar os exercícios. Tente novamente mais tarde.';
+  }
+
+  function normalizar(texto) {
+    return (texto || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim()
+      .toLowerCase();
+  }
+
+  function mostrarExercicios(categoriaSelecionada = '') {
+    lista.replaceChildren();
+
+    const filtrados = exercicios.filter(exercicio => {
+      // Não exibe exercícios marcados como indisponíveis.
+      if (exercicio.ativo !== true) return false;
+
+      if (!categoriaSelecionada) return true;
+
+      return normalizar(exercicio.categoria) ===
+        normalizar(categoriaSelecionada);
+    });
+
+    if (filtrados.length === 0) {
+      lista.textContent = categoriaSelecionada
+        ? 'Nenhum exercício disponível nesta categoria.'
+        : 'Nenhum exercício disponível no momento.';
+      return;
+    }
+
+    filtrados.forEach(exercicio => {
+      const card = document.createElement('article');
+      card.className = 'workout';
+
+      const nome = document.createElement('h3');
+      nome.textContent = exercicio.nome;
+
+      const duracao = document.createElement('p');
+      duracao.textContent = `Duração: ${exercicio.duracao} minutos`;
+
+      const categoria = document.createElement('p');
+      categoria.textContent = `Categoria: ${exercicio.categoria}`;
+
+      card.append(nome, duracao, categoria);
+      lista.appendChild(card);
+    });
+  }
+
+  // Ao clicar numa categoria, filtra os exercícios.
+  categorias.forEach(categoria => {
+    categoria.addEventListener('click', evento => {
+      evento.preventDefault();
+
+      const nomeCategoria = categoria.dataset.categoria;
+
+      mostrarExercicios(nomeCategoria);
+
+      // Leva a pessoa até os exercícios filtrados.
+      lista.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+});
